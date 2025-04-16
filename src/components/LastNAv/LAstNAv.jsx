@@ -3,10 +3,10 @@ import { CountContext } from '../../App';
 
 const LAstNAv = () => {
 
-    const countState = useContext(CountContext)
+    const [count, setCount] = useContext(CountContext)
     return (
         <div>
-            <button className='btn'>last nav-{countState}</button>
+            <button onClick={()=> setCount(count +1)} className='btn'>last nav-{count}</button>
         </div>
     );
 };
